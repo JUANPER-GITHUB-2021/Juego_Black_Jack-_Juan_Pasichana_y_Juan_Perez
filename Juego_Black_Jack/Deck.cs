@@ -30,22 +30,18 @@ namespace Juego_Black_Jack
         }
         public List<Card> Deal()
         {
-            // Create a temporary list of cards and give it the top two cards of the deck.
+
             List<Card> hand = new List<Card>();
             hand.Add(cards[0]);
             hand.Add(cards[1]);
-
-            // Remove the cards added to the hand.
             cards.RemoveRange(0, 2);
-
             return hand;
         }
 
-        public Card DrawCard()
+        public Card Init()
         {
             Card card = cards[0];
             cards.Remove(card);
-
             return card;
         }
         public void randomize()
